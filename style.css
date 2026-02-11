@@ -1,0 +1,153 @@
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: #fff;
+    transition: 0.2s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+.grade-buttons {
+    margin: 12px 0 20px 0;
+}
+
+.grade-buttons button {
+    padding: 10px 16px;
+    margin-right: 8px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #f1f3f5;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.grade-buttons button:hover {
+    background: #e4e6eb;
+    transform: translateY(-1px);
+}
+
+/* Aktív jegy */
+.grade-buttons button.active {
+    background: #4caf50;
+    color: white;
+    border-color: #43a047;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.add-btn {
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.add-btn:hover {
+    background: #43a047;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: center;
+}
+
+th {
+    background: #f1f3f5;
+    font-weight: 600;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+.delete-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #e53935;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+    background: #c62828;
+    box-shadow: 0 4px 10px rgba(229, 57, 53, 0.3);
+}
+
+
+.average {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.jegy.active {
+    background: #4caf50;
+    color: white;
+    border-color: #43a047;
+}

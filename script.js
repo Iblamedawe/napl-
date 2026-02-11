@@ -1,12 +1,5 @@
-    // =============================
-    // STATE
-    // =============================
-
     let jegyek = JSON.parse(localStorage.getItem("jegyek")) ?? [];
 
-    // =============================
-    // IMMUTABLE FÜGGVÉNYEK
-    // =============================
 
     const addJegy = (state, ujJegy) => {
       return [...state, ujJegy];
@@ -38,9 +31,6 @@
       }));
     };
 
-    // =============================
-    // RENDERELÉS
-    // =============================
 
     const renderJegyek = () => {
       const tbody = document.getElementById("jegyek");
@@ -78,9 +68,6 @@
       });
     };
 
-    // =============================
-    // ESEMÉNYEK
-    // =============================
 
     document.getElementById("hozzaadas").addEventListener("click", () => {
       const tantargy = document.getElementById("tantargy").value;
@@ -119,9 +106,17 @@
       });
     });
 
-    // =============================
-    // INIT
-    // =============================
 
     renderJegyek();
     renderTantargyAtlag();
+
+    const gradeButtons = document.querySelectorAll(".grade-buttons button");
+
+    gradeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            gradeButtons.forEach(btn => btn.classList.remove("active"));
+
+            button.classList.add("active");
+        });
+    });
