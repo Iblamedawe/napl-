@@ -1,39 +1,3 @@
-/*const cars = [
-  {make: "Toyota", model: "Camry", year: 2020},
-  {make: "Honda", model: "Civic", year: 2019},
-  {make: "Ford", model: "Mustang", year: 2021}
-];
-
-// 1. filter cars made after 2019
-const recentcars = cars.filter(car => car.year > 2019);
-console.log(recentcars);
-
-// 2. map to get an array of car models
-const carModels = cars.map(car => <div>{car.model} {car.year}</div>);
-console.log(carModels);
-
-// 3. reduce to get the total number of cars
-const totalCars = cars.reduce((total, car) => total + 1, 0);
-console.log(totalCars);
-
-// 4. find the first car made by Honda
-const hondaCar = cars.find(car => car.make === "Honda");
-console.log(hondaCar);
-
-// 5. sort cars by year in descending order
-const sortedCars = cars.slice().sort((a, b) => b.year - a.year);
-console.log(sortedCars);
-
-// 6. check if all cars are made after 2018
-const allRecent = cars.every(car => car.year > 2018);
-console.log(allRecent);
-
-//destruktálás
-const car = {make: "Tesla", model: "Model 3", year: 2021};
-const {make, model, year} = car;
-console.log(make, model, year);
-*/
-
 const diakok = [
   { nev: "Anna", tantargy: "Matematika", jegy: 5 },
   { nev: "Anna", tantargy: "Magyar", jegy: 4 },
@@ -42,3 +6,25 @@ const diakok = [
   { nev: "Csilla", tantargy: "Informatika", jegy: 5 },
   { nev: "Csilla", tantargy: "Matematika", jegy: 4 }
 ];
+
+diakok = diakok.map(diak => ({ ...diak, jegy: diak.jegy + 1 }));
+console.log(diakok);
+
+otosok = diakok.filter(diak => diak.jegy === 5);
+console.log(otosok);
+
+const atlag = diakok.reduce((osszeg, diak) => osszeg + diak.jegy, 0) / diakok.length;
+console.log(atlag);
+
+const infoOtos = diakok.filter(diak => diak.jegy === 5).map(diak => `${diak.nev} - ${diak.tantargy}`);
+console.log(infoOtos);
+
+const vanEEgyes = diakok.some(diak => diak.jegy === 1);
+console.log(vanEEgyes);
+
+const legalabbHarmas = diakok.every(diak => diak.jegy >= 3);
+console.log(legalabbHarmas);
+
+const ujDiak = { nev: "Dávid", tantargy: "Fizika", jegy: 4 };
+const frissitettDiakok = [...diakok, ujDiak];
+console.log(frissitettDiakok);
