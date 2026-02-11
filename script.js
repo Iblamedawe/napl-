@@ -44,7 +44,7 @@
             <td>${j.jegy}</td>
             <td>${j.datum}</td>
             <td>
-              <button onclick="handleDelete(${index})">Törlés</button>
+              <button class="torles" onclick="handleDelete(${index})">Törlés</button>
             </td>
           </tr>
         `;
