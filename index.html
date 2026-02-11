@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     
+  <h1>📒 Napló</h1>
+
+  <!-- Tantárgy választás -->
+  <label>
+    Tantárgy:
+    <select id="tantargy">
+      <option value="Matematika">Matematika</option>
+      <option value="Magyar">Magyar</option>
+      <option value="Történelem">Történelem</option>
+    </select>
+  </label>
+
+  <br><br>
+
+  <!-- Jegy kiválasztás -->
+  <div>
+    Jegy:
+    <button class="jegy" data-value="1">1</button>
+    <button class="jegy" data-value="2">2</button>
+    <button class="jegy" data-value="3">3</button>
+    <button class="jegy active" data-value="4">4</button>
+    <button class="jegy" data-value="5">5</button>
+  </div>
+
+  <br>
+
+  <button id="hozzaadas">Hozzáadás</button>
+
+  <hr>
+
+  <!-- Jegyek táblázat -->
+  <h2>Jegyek</h2>
+
+  <table border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Tantárgy</th>
+        <th>Jegy</th>
+        <th>Dátum</th>
+        <th>Művelet</th>
+      </tr>
+    </thead>
+    <tbody id="jegyek"></tbody>
+  </table>
+
+  <p><strong>Átlag: <span id="atlag">0.00</span></strong></p>
+
+  <hr>
+
+  <!-- Tantárgyankénti átlag -->
+  <h2>Tantárgyankénti átlag</h2>
+
+  <table border="1" cellpadding="5">
+    <thead>
+      <tr>
+        <th>Tantárgy</th>
+        <th>Átlag</th>
+      </tr>
+    </thead>
+    <tbody id="tantargy-atlag"></tbody>
+  </table>
 </body>
 </html>
